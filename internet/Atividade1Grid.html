@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1 Grid</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                'header header header'
+                'nav content content'
+                'footer footer footer';
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 200px 1fr 1fr;
+            height: 100vh;
+            width: 100%;
+        }
+        .header {
+            grid-area: header;
+            background-color: #ff7f7f;
+            padding: 20px;
+            text-align: center;
+        }
+        .nav {
+            grid-area: nav;
+            background-color: #b0e0e6;
+            padding: 20px;
+        }
+        .content {
+            grid-area: content;
+            background-color: #f0e68c;
+            padding: 20px;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: #98fb98;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="nav">Nav</div>
+        <div class="content">Content</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
